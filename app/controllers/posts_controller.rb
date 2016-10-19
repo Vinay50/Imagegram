@@ -1,6 +1,11 @@
 class PostsController < ApplicationController
 
 	def index
+		@post = Post.all
+	end
+
+	def show
+		@post = Post.find_by(params[:id])
 	end
 
 	def new
@@ -21,7 +26,7 @@ class PostsController < ApplicationController
 	private 
 
 	def post_params
-		params.require(:post).permit(:caption)
+		params.require(:post).permit(:caption, :image)
 	end
 
 end
