@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
+	before_action :set_post, :only => [:show, :edit, :update]
 
 	def index
-		@post = Post.all
+		@posts = Post.all
 	end
 
 	def show
@@ -23,10 +24,26 @@ class PostsController < ApplicationController
 	       end
 	end
 
+	def edit
+	end
+
+	def update
+		if @post.update(post_params)
+			flash[:success] = "Post has been updated"
+			redirect_to @post
+		else
+		   flash[:error]  = "Post could not be updated!"
+		   render :edit
+		end	
+	end
+
 	private 
 
 	def post_params
 		params.require(:post).permit(:caption, :image)
 	end
 
+	def set_post
+		@post = Post.find_by(params[:id])
+	end
 end
