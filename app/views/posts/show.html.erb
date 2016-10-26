@@ -1,2 +1,8 @@
-<%= image_tag @post.image.url(:medium) %></br>
+ <div class ="col-md-12">
+ <div class ="col-md-6 col-md-offset-3">
+ <div class="image center-block">
+      <%= link_to (image_tag @post.image.url(:medium), class:'img-responsive'), post_path(@post) %>
+    </div>
 <h3><%=  @post.caption %></h3>
+</div>
+</div>

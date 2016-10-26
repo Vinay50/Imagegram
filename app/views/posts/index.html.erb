@@ -1,4 +1,13 @@
-<%  @posts.each do |post| %>
-	<%= image_tag post.image.url(:medium) %>
-	<%=  post.caption %>
-<% end %>
+<div class ="col-md-12">
+	 <div class ="col-md-6 col-md-offset-3">
+		<%  @posts.each do |post| %>
+			 <div class="panel panel-default">
+			  	<div class="panel-heading"><%= image_tag post.image.url(:medium) , class: "img-responsive" %></div>
+			       <div class="panel-body">
+			       	<%=  post.caption %>
+			       </div>
+		       </div>
+		<% end %>       
+      </div>
+</div>     		
+           

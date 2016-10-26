@@ -1,12 +1,13 @@
 class PostsController < ApplicationController
-	before_action :set_post, :only => [:show, :edit, :update]
+	before_action :find_post, :only => [:destroy, :edit, :update,]
+	before_action :authenticate_user!,  :only =>  [:new, :create, :destroy,:edit, :update]
 
 	def index
 		@posts = Post.all
 	end
 
 	def show
-		@post = Post.find_by(params[:id])
+		@post = Post.find (params[:id])
 	end
 
 	def new
@@ -14,7 +15,7 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		@post =  Post.new(post_params)
+		@post =  Post.new(posts_params)
 		if @post.save
 			flash[:success]  = "Post has been created"
 			redirect_to @post
@@ -28,7 +29,7 @@ class PostsController < ApplicationController
 	end
 
 	def update
-		if @post.update(post_params)
+		if @post.update(posts_params)
 			flash[:success] = "Post has been updated"
 			redirect_to @post
 		else
@@ -39,11 +40,11 @@ class PostsController < ApplicationController
 
 	private 
 
-	def post_params
-		params.require(:post).permit(:caption, :image)
+	def posts_params
+		params.require(:post).permit(:image, :caption)
 	end
 
-	def set_post
+	def find_post
 		@post = Post.find_by(params[:id])
 	end
 end

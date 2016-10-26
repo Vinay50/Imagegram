@@ -16,3 +16,61 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+.navbar-default {
+    background-color: #3097d1;
+    border-color: #1c73a5;
+}
+.navbar-default .navbar-brand {
+    color: #fff;
+}
+.navbar {
+    border-radius: 0px;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    background-color: #3097d1;
+    color: #fff;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    background-color: transparent;
+    color: #fff;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: transparent;
+    color: #fff;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color: #3097d1;
+    color: #fff;
+    text-decoration: none;
+}
+body {
+    background-color: #e9ebee;
+    color: #333333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+}
+.img-responsive-custom {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.image-border {
+   border:1px solid;
+   border-color:#adadad;
+}
+.caption-border {
+   border:1px solid;
+   border-color:#adadad;
+   background-color: #fff;
+   margin: 2% 0%;
+}
+.post-container{
+    padding: 2%;
+    background-color: #454545;
+}
