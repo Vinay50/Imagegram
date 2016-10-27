@@ -11,6 +11,12 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+#Ignore locally added images
+public/system/posts/images
+
+#Ignore db schema files
+db/schema.rb
+
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
