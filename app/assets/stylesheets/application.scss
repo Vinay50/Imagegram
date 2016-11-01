@@ -77,13 +77,32 @@ body {
 .sign-in-up{
   background-color: #fff   
 }
+.alert-fixed {
+    left: 0;
+    margin-left: 32%;
+    margin-top: 30px;
+    padding: 5px 25px;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 450px;
+    z-index: 10000;
+}
+.alert-info {
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    color: #31708f;
+}
+.alert-dismissable, .alert-dismissible {
+    padding-right: 35px;
+}
 .alert {
-    background-color: lightblue;
+    background-color: lightgray;
     border: 1px solid transparent;
     border-radius: 4px;
+    color: green;
     margin-bottom: 20px;
     padding: 15px;
-    background-color:lightblue;
     text-align: center;
 }
 .error{
@@ -91,4 +110,17 @@ body {
 }
 .error_notification{
      color: red;
+}
+.post-border {
+   border:1px solid #eee;
+   background-color: #fff;
+   margin: 2% 0%;
+}
+.comment-box{
+    margin: 1% 1%;
+    width: 95%;
+    margin-bottom: -12px;
+}
+.comment{
+  margin: 0% 1%;
 }

@@ -1,0 +1,22 @@
+<div class ="col-md-12">
+	<div class ="col-md-6 col-md-offset-3 ">
+	      <div class ="post-border">
+			 <div class="panel panel-default">
+			  	<div class="panel-heading">
+			  		<%= link_to (image_tag post.image.url(:medium) , class: "img-responsive" ), post_path(post) %>		
+			  	</div>
+			       <div class="panel-body">
+			       	<%=  post.caption %>
+			       </div>
+	             </div>
+		       <div class="comments" id="comments_<%= post.id %>">
+		            <% if post.comments.any? %>
+		              <%= render post.comments, post: post %>
+		            <% end %>
+	              </div>
+		       <%= form_for [post, post.comments.build] , remote: true do | f |%>
+		          	<%= f.text_field:content, placeholder: 'Write a comment...', :class => "form-control comment_content comment-box", id: "comment_content_#{post.id}" %></br>
+		       <% end %>
+		</div>       
+      </div>
+</div>     		
