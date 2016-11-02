@@ -1,8 +1,8 @@
-<div class="posts-wrapper">
-  <div class="row profile-header">
-    <div class="col-md-6">
-      <div class="img-circle">
-        <%= image_tag(@user.avatar.url(:medium)) %>
+<div class="posts-wrapper ">
+  <div class="row profile-header ">
+    <div class="col-md-6 ">
+      <div class="img-circle img-circle-profile ">
+        <%= profile_avatar_select(@user) %>
       </div>
     </div>
     <div class="col-md-6">
@@ -30,18 +30,25 @@
       <p class="profile-bio">
         <%= @user.bio %>
       </p>
-      <div class="user-statistics text-center">
+      <div class="user-statistics">
         <ul class="list-inline list-unstyled">
           <li>
             <strong><%= @user.posts.count %></strong> 
             <%= "post".pluralize(@user.posts.count)%>
+          </li>
+          <li>
+            <strong><%= "0" %></strong> 
+            <%= "follower"%>
+          </li>
+          <li>
+            <strong><%=  "0" %></strong> 
+            <%= "following" %>
           </li>
         </ul>
       </div>
     </div>
   </div>
 </div>
-
 <% @posts.each do |post| %>
  	<%= render 'posts/post', post: post %>
 <% end %>

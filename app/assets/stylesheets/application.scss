@@ -124,3 +124,81 @@ body {
 .comment{
   margin: 0% 1%;
 }
+
+.profile-header {
+  padding: 20px 0;
+}
+
+.posts-wrapper {
+  padding-top: 40px;
+  margin: 0 auto;
+  max-width: 642px;
+  width: 100%;
+}
+
+.user-name-and-follow {
+  display: inline;
+}
+.profile-user-name {
+  display: inline;
+}
+
+.edit-button {
+  border-color: #818488;
+  color: #818488;
+  margin-left: 20px;
+}
+
+.profile-bio {
+  margin-top: 20px;
+}
+
+#user_bio {
+  border: 1px solid gray;
+}
+
+#user_avatar {
+  padding: 1em;
+  margin: 0px auto;
+}
+.likes {
+  margin-top: 20px;
+  margin-bottom: 7px;
+  color: #4b4f54;
+}
+
+.like {
+  text-decoration: none;
+  color: red;
+}
+
+.like-button a:hover, a:focus {
+  text-decoration: none;
+  color: red;
+}
+
+// NOTIFICATIONS
+
+.notification-dropdown {
+  margin-top: 10px;
+  button {
+    border: none;
+  }
+}
+
+.notification-index-list {
+  margin-top: 5em;
+  list-style: none;
+  li {
+    margin-top: 1em;
+    background-color: white;
+    padding: 1em;
+  }
+}
+.pagination-post {
+  margin-bottom: 20px;
+}
+.img-circle-profile {
+    margin-left: 10%;
+    border-radius: 25px;
+}
