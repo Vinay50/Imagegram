@@ -13,7 +13,6 @@ class ProfilesController < ApplicationController
       	if  @user.update(profile_params)  
 	          	flash[:success] = "Your profile updated"
 	            redirect_to	profile_path(@user.username)
-	          	binding.pry
             else
             	flash[:error] = @user.errors.full_messages 	
           		redner :edit

@@ -33,6 +33,7 @@
       <div class="user-statistics">
         <ul class="list-inline list-unstyled">
           <li>
+          <i class="fa fa-shield"></i>
             <strong><%= @user.posts.count %></strong> 
             <%= "post".pluralize(@user.posts.count)%>
           </li>
@@ -43,6 +44,25 @@
           <li>
             <strong><%=  "0" %></strong> 
             <%= "following" %>
+          </li>
+        </ul>
+           <ul class="list-inline list-unstyled">
+          <li>
+            <i class="fa fa-map-marker"></i>
+            <%= @user.location %>
+          </li>
+          <li>
+            <%if @user.gender ==  "Female"%>
+             <li><i class="fa fa-female">
+              <%= "24"%></i>
+             <% else %>
+                <li>  <i class="fa fa-male"></i>
+                 <%= "24"%></li>
+            <% end %>
+          </li>
+          <li>
+           <i class="fa fa-phone" aria-hidden="true"></i>
+            <%= @user.phone_number%>
           </li>
         </ul>
       </div>
